@@ -4,7 +4,7 @@ module TickSpec.NUnit
 open TickSpec
 open NUnit.Framework
 
-[<TestFixture>]
+[<TestFixture;AbstractClass>]
 type FeatureFixture<'TState>
       (featureLines:string[], 
        doStep:'TState->StepType->'TState, 
@@ -13,7 +13,7 @@ type FeatureFixture<'TState>
     [<TestCaseSource("Scenarios")>]
     member this.TestScenario (scenario:ScenarioSource) =
         scenario.Steps 
-        |> Seq.scan (fun acc (step,line) -> doStep acc step) initState
+        |> Array.scan (fun acc (step,line) -> doStep acc step) initState
         |> ignore
     member this.Scenarios =       
         let feature = FeatureParser.parseFeature featureLines

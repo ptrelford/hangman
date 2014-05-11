@@ -40,9 +40,9 @@ module Runner =
         printfn "%s" text
         Console.ForegroundColor <- old
 
-    let tryStep f acc (step,line) =
+    let tryStep performStep state (step,line) =
         try 
-            let acc = f acc step
+            let acc = performStep state step
             print ConsoleColor.Green line.Text
             acc
         with e ->
@@ -50,13 +50,13 @@ module Runner =
             printfn "Line %d: %A" line.Number e
             reraise ()
 
-    let runFeature (feature:string[]) f init =
+    let runFeature (feature:string[]) performStep init =
         let feature = feature |> FeatureParser.parseFeature        
         feature.Scenarios
         |> Seq.filter (fun scenario -> scenario.Tags |> Seq.exists ((=) "ignore") |> not) 
         |> Seq.iter (fun scenario ->
             print ConsoleColor.Green scenario.Name            
-            scenario.Steps |> Array.scan (tryStep f) init
+            scenario.Steps |> Array.scan (tryStep performStep) init
             |> ignore
         )
 

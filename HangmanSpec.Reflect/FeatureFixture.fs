@@ -8,8 +8,7 @@ let assembly = Assembly.GetExecutingAssembly()
 let definitions = StepDefinitions(assembly)       
 
 /// Inherit from FeatureFixture to define a feature fixture
-[<AbstractClass>]
-[<TestFixture>]
+[<TestFixture;AbstractClass>]
 type FeatureFixture (source:string) =
     [<Test>]
     [<TestCaseSource("Scenarios")>]

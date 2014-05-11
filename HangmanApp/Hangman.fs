@@ -86,7 +86,7 @@ open System
 
 let tally (word:string) guesses =
    guesses |> Seq.filter (fun c ->
-      not (Seq.exists ((=) c) word)
+      not (String.exists ((=) c) word)
    ) |> Seq.length
 
 let toPartialWord (word:string) (guesses:char seq) =
