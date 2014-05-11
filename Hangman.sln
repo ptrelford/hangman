@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HangmanApp", "HangmanApp\HangmanApp.fsproj", "{F94D9095-639D-4083-9FB9-ACD30766E014}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HangmanSpec.Reflect", "HangmanSpec.Reflect\HangmanSpec.Reflect.fsproj", "{DCBC8BC2-28A5-4822-9443-9BE7784F8D4C}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HangmanSpec.Fold", "HangmanSpec.Fold\HangmanSpec.Fold.fsproj", "{A5EF3C29-D058-42AE-80FC-FE798A67BA59}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F94D9095-639D-4083-9FB9-ACD30766E014}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F94D9095-639D-4083-9FB9-ACD30766E014}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F94D9095-639D-4083-9FB9-ACD30766E014}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F94D9095-639D-4083-9FB9-ACD30766E014}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCBC8BC2-28A5-4822-9443-9BE7784F8D4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCBC8BC2-28A5-4822-9443-9BE7784F8D4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCBC8BC2-28A5-4822-9443-9BE7784F8D4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCBC8BC2-28A5-4822-9443-9BE7784F8D4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5EF3C29-D058-42AE-80FC-FE798A67BA59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5EF3C29-D058-42AE-80FC-FE798A67BA59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5EF3C29-D058-42AE-80FC-FE798A67BA59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5EF3C29-D058-42AE-80FC-FE798A67BA59}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
